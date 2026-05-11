@@ -9,7 +9,7 @@
       "config": {
         "includeFiles": [
           "apps/backend/src/generated/prisma/**",
-          "node_modules/.prisma/helpdesk-client/**",
+          "node_modules/.prisma/**",
           "apps/backend/dist/**",
           "packages/shared-types/dist/**",
           "node_modules/@prisma/client/**",
