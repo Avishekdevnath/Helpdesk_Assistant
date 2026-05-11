@@ -1,0 +1,75 @@
+# Environment & Secrets
+.env
+.env.local
+.env.test
+.env.*.local
+
+# Dependencies
+node_modules/
+node_modules/.prisma/
+pnpm-lock.yaml
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.orig
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+test-results/
+*.lcov
+
+# Monorepo & Build tools
+.turbo/
+.vercel/
+.vercel/output/
+
+# Documentation & Planning (excluded from repo)
+docs/
+ideation/
+*.md
+!README.md
+!apps/*/README.md
+*.md.local
+
+# Chrome extension build
+apps/extension/dist/
+apps/extension/build/
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+.prisma/
+
+# Cache
+.cache/
+temp/
+tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Misc
+.env.d.ts

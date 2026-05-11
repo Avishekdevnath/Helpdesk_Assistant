@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter @helpdesk/shared-types build && pnpm --filter backend prisma generate && pnpm --filter backend build",
+  "builds": [
+    {
+      "src": "apps/backend/api/index.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "apps/backend/src/generated/prisma/**",
+          "node_modules/.prisma/helpdesk-client/**",
+          "apps/backend/dist/**",
+          "packages/shared-types/dist/**",
+          "node_modules/@prisma/client/**",
+          "node_modules/@prisma/adapter-neon/**",
+          "node_modules/@neondatabase/serverless/**",
+          "node_modules/openai/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/backend/api/index.ts"
+    }
+  ]
+}
