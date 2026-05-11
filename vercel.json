@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "packageManager": "pnpm@10.32.1",
   "installCommand": "corepack enable && corepack use pnpm@10.32.1 && pnpm install --frozen-lockfile",
   "buildCommand": "pnpm --filter @helpdesk/shared-types build && pnpm --filter backend prisma generate && pnpm --filter backend build",
   "builds": [
